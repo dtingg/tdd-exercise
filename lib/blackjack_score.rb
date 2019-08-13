@@ -7,6 +7,10 @@ def blackjack_score(hand)
   number_cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
   total = 0
   
+  if hand.length < 2 || hand.length > 5
+    raise ArgumentError.new("You don't have the right number of cards.")
+  end
+  
   hand.each do |card|
     if face_cards.include?(card)
       total += 10

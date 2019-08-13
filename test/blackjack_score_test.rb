@@ -73,4 +73,16 @@ describe 'Blackjack Score' do
     }.must_raise ArgumentError
     
   end
+  
+  it "raises an ArgumentError for hands less than 2 cards" do
+    expect {
+      blackjack_score(["Queen"])
+    }.must_raise ArgumentError
+  end
+  
+  it "raises an ArgumentError for hands more than 5 cards" do
+    expect {
+      blackjack_score([3, 10, 5, 2, 4, 6])
+    }.must_raise ArgumentError
+  end
 end
