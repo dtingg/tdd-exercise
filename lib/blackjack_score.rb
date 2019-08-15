@@ -6,7 +6,6 @@ def blackjack_score(hand)
   face_cards = ["King", "Queen", "Jack"]
   number_cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
   base_score = 0
-  total_score = 0
   aces = 0
   
   if hand.length < 2 || hand.length > 5
